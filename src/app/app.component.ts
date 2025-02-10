@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'agriculture-project-old';
+  title = 'agriculture-project';
+
+  constructor(private auth: AuthService) { }
+
+  isLoggedIn(): boolean {
+    return this.auth.isAuthenticated();
+  }
 }
