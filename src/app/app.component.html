@@ -1,11 +1,7 @@
 <mat-toolbar *ngIf="!isLoggedIn()" color="primary" class="mat-elevation-z8">
-
     <span class="example-spacer"></span>
-
-    <button routerLink="/login" mat-button>Login</button>
-    <button routerLink="/register" mat-button>Register</button>
-
+    <button routerLink="auth/login" mat-button>Login</button>
+    <button routerLink="auth/register" mat-button>Register</button>
 </mat-toolbar>
-
 <router-outlet></router-outlet>
 
