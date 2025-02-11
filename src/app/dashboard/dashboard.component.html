@@ -18,12 +18,18 @@
 </mat-toolbar>
 
 <mat-drawer-container style="height: 100vh;" autosize>
-    <mat-drawer #drawer [mode]="'side'" [opened]="!isCollapsed" [style.width.px]="isCollapsed ? 60 : 250">
+    <mat-drawer #drawer [mode]="'side'" [opened]="true" [style.width.px]="isCollapsed ? 80 : 250">
         <mat-nav-list>
             <mat-list-item>
                 <button mat-button>
                     <mat-icon>dashboard</mat-icon>
                     <span *ngIf="!isCollapsed">Dashboard</span> 
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button>
+                    <mat-icon>category</mat-icon>
+                    <span *ngIf="!isCollapsed">Master</span> 
                 </button>
             </mat-list-item>
             <mat-list-item>
